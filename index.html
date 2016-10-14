@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Victor's page</title>
-    <style type="text/css">
-      body {
-        margin: 40px auto;
-        max-width: 650px;
-        line-height: 1.6;
-        font-size: 1.2em;
-        color: #444;
-        padding: 0 10px
-      }
-      h1, h2, h3 {
-        line-height:1.2
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Victor van Poppelen</h1>
-      <em>B.Eng. Mechanical Engineering</em>
-    </header>
-    <hr>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Victor's page</title>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=PT+Serif');
+            body {
+                margin:             40px auto;
+                max-width:          650px;
+                line-height:        1.6;
+                font-family:        'PT Serif', serif;
+                color:              #444;
+                padding:            0 10px;
+            }
+            header {
+                font-size:          1.2em;
+            }
+            h1, h2, h3 {
+                line-height:        0.2;
+            }
+            a {
+                text-decoration:none;
+            }
+            div.profile {
+                float:              left;
+                margin:             -1em 1em 0 0;
+                overflow:           hidden;
+                height:             6em;
+                width:              5em;
+                border-radius:      5px;
+                padding:            2px;
+            }
+            img.profile {
+                height:             8em;
+                transform:          translate(-19%, -8%);
+            }
+            div.social {
+                text-align:         right;
+            }
+            div.social a {
+                cursor:             pointer;
+            }
+            div.social img {
+                opacity:            0.7;
+            }
+            div.social a:hover img {
+                opacity:            1;
+                background-color:   #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="profile">
+                <img class="profile" alt="Profile picture" src="profile.jpg">
+            </div>
+            <h1>Victor van Poppelen</h1>
+            <em>University of Victoria</em>
+        <hr>
+        <div class="social">
+            <a href="mailto:victorvanpoppelen@uvic.ca">
+                <img alt="LinkedIn" src="glyphicons-gmail.png">
+            </a>
+            <a href="https://www.linkedin.com/in/victorvanpoppelen">
+                <img alt="LinkedIn" src="glyphicons-linked-in.png">
+            </a>
+            <a href="https://github.com/vvanpo">
+                <img alt="Github" src="glyphicons-github.png">
+            </a>
+        </div>
+        </header>
+    </body>
 </html>
