@@ -20,8 +20,16 @@
             h1, h2, h3 {
                 line-height:        0.2;
             }
-            a {
-                text-decoration:none;
+            a:link, a:visited {
+                margin:             -1px -2px 0 -2px;
+                padding:            1px 2px 0 2px;
+                color:              #3677a9;
+                font-weight:        bold;
+                text-decoration:    none;
+            }
+            a:hover {
+                color:              #fff;
+                background-color:   #3677a9;
             }
             div.profile {
                 float:              left;
@@ -41,6 +49,7 @@
             }
             div.social a {
                 cursor:             pointer;
+                background:         none;
             }
             div.social img {
                 opacity:            0.7;
@@ -48,6 +57,13 @@
             div.social a:hover img {
                 opacity:            1;
                 background-color:   #ddd;
+            }
+            .description {
+                margin:             0 2em 1em 2em;
+                line-height:        1.2;
+            }
+            ul.description {
+                margin:             0;
             }
         </style>
     </head>
@@ -71,5 +87,31 @@
             </a>
         </div>
         </header>
+        <h2>Education</h2>
+        <strong>University of Victoria,</strong> Victoria, BC
+        <em style="float: right">2016 –</em><br>
+        <p class="description">B.Eng., Mechanical Engineering</p>
+        <strong>McGill University,</strong> Montréal, QC
+        <em style="float: right">2010 – 2014</em><br>
+        <p class="description">
+            B.Sc., Honours Math and Physics (<strong>discontinued</strong>)<br>
+            CGPA 3.8/4.0<br>
+            Dean's Honour List<br>
+            Faculty Academic Scholarship
+        </p>
+        <h2>Employment</h2>
+        <strong>Systems Performance Engineer,</strong> IBM Canada
+        <em style="float: right">2013 – 2015</em><br>
+        <em class=description>Markham, ON, Canada</em>
+        <ul class="description">
+            <li>Lead and contributed to projects optimizing l/O performance on Linux systems, specifically for IBM’s Power microarchitecture</li>
+            <li>Designed and authored a framework for reporting CPU utilization details targeting highly parallel applications</li>
+        </ul>
+        <h2>Articles</h2>
+        <ul>
+            <li><a href="http://avanpo.github.io/2016/10/11/avr-programming/">
+            AVR Programming in C
+            </a></li>
+        </ul>
     </body>
 </html>
