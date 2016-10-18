@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Victor's page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=PT+Serif');
-        @media (min-width: 768px) {
-            body {
-                max-width:      730px;
-            }
-        }
         @font-face {
             font-family:        'Glyphicons Social';
             src: url('fonts/glyphicons-social-regular.eot');
             src: url('fonts/glyphicons-social-regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family:        'Glyphicons Filetypes';
+            src: url('fonts/glyphicons-filetypes-regular.eot');
+            src: url('fonts/glyphicons-filetypes-regular.ttf') format('truetype');
         }
         .glyphicon-gmail:before {
             font-family:        'Glyphicons Social';
@@ -30,15 +29,36 @@
             font-family:        'Glyphicons Social';
             content:            "\E022";
         }
+        .glyphicon-jpg:before {
+            font-family:        'Glyphicons Filetypes';
+            content:            "\E052";
+        }
+        *, *::before, *::after {
+            box-sizing:         border-box;
+        }
         body {
-            margin:             40px auto;
+            margin:             2rem auto;
             padding:            0 10px;
             font-family:        'PT Serif', serif;
             font-size:          large;
             color:              #444;
         }
+        @media (min-width: 768px) {
+            body {
+                max-width:      730px;
+            }
+        }
         header {
-            font-size:          1.2em;
+            margin-bottom:      1rem;
+            font-size:          1.2rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin:             0 0 0.5rem 0;
+            font-weight:        500;
+            line-height:        1.1;
+        }
+        strong {
+            font-weight:        bolder;
         }
         a, a:link, a:visited {
             margin:             -1px -2px 0 -2px;
@@ -51,34 +71,66 @@
             color:              #fff;
             background-color:   #3677a9;
         }
-        a.thumbnail:hover {
-            background-color:   #fff;
+        section>p {
+            margin:             0 2rem 1rem 2rem;
         }
         a.glyphicon {
-            margin:             0 -0.1em;
-            padding:            0.1em;
-            vertical-align:     middle;
+            margin:             0 -0.1rem;
+            padding:            0.1rem;
             font-weight:        normal;
         }
         div.profile {
             float:              left;
-            margin:             -1em 1em 0 0;
+            margin:             -1rem 1rem 0 0;
             overflow:           hidden;
-            height:             6em;
-            width:              5em;
+            height:             8rem;
+            width:              7rem;
             border-radius:      5px;
             padding:            2px;
         }
         div.profile img {
-            height:             8em;
-            transform:          translate(-19%, -8%);
+            height:             10rem;
+            transform:          translate(-15%, -8%);
         }
         .social {
-            margin-top:         -1em;
+            margin-top:         -0.5rem;
             text-align:         right;
         }
-        section p {
-            margin:             0 2em 1em 2em;
+        .cards {
+            padding:            1rem;
+        }
+        .card {
+            display:            block;
+            width:              100%;
+            border-radius:      0.25rem;
+            margin:             0 0 1px 0;
+        }
+        .cards-column>a {
+            margin:             0;
+            padding:            0;
+        }
+        .cards-column>a:hover img {
+            opacity:            0.75;
+        }
+        @media (min-width: 544px) {
+            .cards {
+                column-count:   2;
+                column-gap:     1px;
+            }
+            .card {
+                border-radius:  0;
+            }
+            .cards .cards-column:first-child .card:first-child {
+                border-top-left-radius: 0.25rem;
+            }
+            .cards .cards-column:last-child .card:first-child {
+                border-top-right-radius: 0.25rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .cards {
+                column-count:   3;
+            }
         }
     </style>
 </head>
@@ -106,45 +158,35 @@
     </section>
     <section>
         <h2>Projects</h2>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/FZ6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+        <em>Woodworking</em>
+        <div class="cards">
+            <div class="cards-column">
+                <a href="#">
+                    <img class="card" src="projects/bench-thumb.jpg" alt="Handcrafted Fir bench">
+                </a>
+                <a href="#">
+                    <img class="card" src="projects/toolbox-thumb.jpg" alt="Toolbox">
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/bench.jpg" alt="Handcrafted Fir bench">
+            <div class="cards-column">
+                <a href="#">
+                    <img class="card" src="projects/butcher block-thumb.jpg" alt="Butcher block">
+                </a>
+                <a href="#">
+                    <img class="card" src="projects/cup holder-thumb.jpg" alt="Cup holder">
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/biophilia.jpg" alt="Engraved Eucalyptus sign">
+            <div class="cards-column">
+                <a href="#">
+                    <img class="card" src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/butcher block.jpg" alt="Butcher block">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/address sign.jpg" alt="Cedar address sign">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/hatchet sheath.jpg" alt="Leather hatchet sheath">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/toolbox.jpg" alt="Toolbox">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="thumbnail">
-                    <img src="projects/cup holder.jpg" alt="Truck cup holder">
+        </div>
+        <em>Design</em>
+        <div class="cards">
+            <div class="cards-column">
+                <a href="#">
+                    <img class="card" src="projects/FZ6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
                 </a>
             </div>
         </div>
@@ -173,8 +215,5 @@
             <li>Designed and authored a framework for reporting CPU utilization details targeting highly parallel applications</li>
         </ul>
     </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
