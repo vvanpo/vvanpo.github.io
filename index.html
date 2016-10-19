@@ -89,7 +89,7 @@
             padding:            2px;
         }
         div.profile img {
-            height:             10rem;
+            width:              9.5rem;
             transform:          translate(-15%, -8%);
         }
         .social {
@@ -101,15 +101,21 @@
         }
         .card {
             display:            block;
-            width:              100%;
             border-radius:      0.25rem;
             margin:             0 0 1px 0;
-        }
-        .cards-column>a {
-            margin:             0;
             padding:            0;
         }
-        .cards-column>a:hover img {
+        a.card, a.card:hover {
+            margin:             0 0 1px 0;
+            padding:            0;
+            background-color:   #fff;
+        }
+        a.card img {
+            display:            block;
+            width:              100%;
+            border-radius:      inherit;
+        }
+        a.card:hover img {
             opacity:            0.75;
         }
         @media (min-width: 544px) {
@@ -120,17 +126,52 @@
             .card {
                 border-radius:  0;
             }
-            .cards .cards-column:first-child .card:first-child {
+            .card:first-child {
                 border-top-left-radius: 0.25rem;
-            }
-            .cards .cards-column:last-child .card:first-child {
-                border-top-right-radius: 0.25rem;
             }
         }
         @media (min-width: 768px) {
             .cards {
                 column-count:   3;
             }
+        }
+        .project {
+            display:            none;
+            padding:            1em;
+        }
+        @media (min-width: 544px) {
+            .project {
+                padding:        1em 15%;
+            }
+        }
+        .project-card {
+            border:             1px solid #ddd;
+            border-radius:      0.25rem;
+        }
+        .project:target {
+            display:            block;
+        }
+        .project-card h3 {
+            margin:             1rem;
+            text-align:         center;
+            color:              #818a91;
+        }
+        .project-card img {
+            width:              100%;
+        }
+        .project-card p {
+            margin:             1rem;
+            font-size:          medium;
+        }
+        .file-link {
+            margin:             -1rem 0 0 0;
+            padding:            0 0.5rem 0.5rem 0;
+            text-align:         right;
+        }
+        .file-link a {
+            margin:             0;
+            padding:            0;
+            font-size:          larger;
         }
     </style>
 </head>
@@ -160,35 +201,27 @@
         <h2>Projects</h2>
         <em>Woodworking</em>
         <div class="cards">
-            <div class="cards-column">
-                <a href="#">
-                    <img class="card" src="projects/bench-thumb.jpg" alt="Handcrafted Fir bench">
-                </a>
-                <a href="#">
-                    <img class="card" src="projects/toolbox-thumb.jpg" alt="Toolbox">
-                </a>
-            </div>
-            <div class="cards-column">
-                <a href="#">
-                    <img class="card" src="projects/butcher block-thumb.jpg" alt="Butcher block">
-                </a>
-                <a href="#">
-                    <img class="card" src="projects/cup holder-thumb.jpg" alt="Cup holder">
-                </a>
-            </div>
-            <div class="cards-column">
-                <a href="#">
-                    <img class="card" src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
-                </a>
-            </div>
+            <a class="card" href="#bench">
+                <img src="projects/bench-thumb.jpg" alt="Handcrafted Fir bench">
+            </a>
+            <a class="card" href="#butcher-block">
+                <img src="projects/butcher block-thumb.jpg" alt="Butcher block">
+            </a>
+            <a class="card" href="#biophilia">
+                <img src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
+            </a>
+            <a class="card" href="#toolbox">
+                <img src="projects/toolbox-thumb.jpg" alt="Toolbox">
+            </a>
+            <a class="card" href="#cup-holder">
+                <img src="projects/cup holder-thumb.jpg" alt="Cup holder">
+            </a>
         </div>
         <em>Design</em>
         <div class="cards">
-            <div class="cards-column">
-                <a href="#">
-                    <img class="card" src="projects/FZ6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
-                </a>
-            </div>
+            <a class="card" href="#fz6-bracket">
+                <img src="projects/FZ6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+            </a>
         </div>
     </section>
     <section>
@@ -215,5 +248,15 @@
             <li>Designed and authored a framework for reporting CPU utilization details targeting highly parallel applications</li>
         </ul>
     </section>
+    <div id="bench" class="project">
+        <div class="project-card">
+            <h3>Handcrafted Douglas-fir bench</h3>
+            <img src="projects/bench-thumb.jpg" alt="Handcrafted Fir bench">
+            <p>Collected off-cuts from my place of work to build a park bench, as an exercise to learn joinery techniques.</p>
+            <div class="file-link">
+                <a class="glyphicon glyphicon-jpg" href="projects/bench.jpg"></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
