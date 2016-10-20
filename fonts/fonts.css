@@ -51,3 +51,7 @@
     font-family:        'Glyphicons Filetypes';
     content:            "\E052";
 }
+.glyphicon-pdf:before {
+    font-family:        'Glyphicons Filetypes';
+    content:            "\E065";
+}
