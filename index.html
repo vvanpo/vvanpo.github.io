@@ -6,39 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Victor's page</title>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css?family=PT+Serif');
-        @font-face {
-            font-family:        'Glyphicons Social';
-            src: url('fonts/glyphicons-social-regular.eot');
-            src: url('fonts/glyphicons-social-regular.ttf') format('truetype');
-        }
-        @font-face {
-            font-family:        'Glyphicons Filetypes';
-            src: url('fonts/glyphicons-filetypes-regular.eot');
-            src: url('fonts/glyphicons-filetypes-regular.ttf') format('truetype');
-        }
-        .glyphicon-gmail:before {
-            font-family:        'Glyphicons Social';
-            content:            "\E019";
-        }
-        .glyphicon-linked-in:before {
-            font-family:        'Glyphicons Social';
-            content:            "\E018";
-        }
-        .glyphicon-github:before {
-            font-family:        'Glyphicons Social';
-            content:            "\E022";
-        }
-        .glyphicon-jpg:before {
-            font-family:        'Glyphicons Filetypes';
-            content:            "\E052";
-        }
+        @import url('fonts/fonts.css');
         *, *::before, *::after {
             box-sizing:         border-box;
         }
         body {
-            margin:             2rem auto;
-            padding:            0 10px;
+            margin:             1rem auto;
+            padding:            0 1rem;
             font-family:        'PT Serif', serif;
             font-size:          large;
             color:              #444;
@@ -85,7 +59,8 @@
             overflow:           hidden;
             height:             8rem;
             width:              7rem;
-            border-radius:      5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
             padding:            2px;
         }
         div.profile img {
@@ -110,7 +85,7 @@
             padding:            0;
             background-color:   #fff;
         }
-        a.card img {
+        a.card img, img.card {
             display:            block;
             width:              100%;
             border-radius:      inherit;
@@ -120,7 +95,11 @@
         }
         @media (min-width: 544px) {
             .cards {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
                 column-count:   2;
+                -webkit-column-gap: 1;
+                -moz-column-gap: 1px;
                 column-gap:     1px;
             }
             .card {
@@ -132,24 +111,26 @@
         }
         @media (min-width: 768px) {
             .cards {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
                 column-count:   3;
             }
         }
         .project {
             display:            none;
-            padding:            1em;
+            padding:            1rem;
         }
         @media (min-width: 544px) {
             .project {
-                padding:        1em 15%;
+                padding:        1rem 15%;
             }
+        }
+        .project:target {
+            display:            block;
         }
         .project-card {
             border:             1px solid #ddd;
             border-radius:      0.25rem;
-        }
-        .project:target {
-            display:            block;
         }
         .project-card h3 {
             margin:             1rem;
@@ -158,6 +139,8 @@
         }
         .project-card img {
             width:              100%;
+            border-top:         1px solid #ddd;
+            border-bottom:      1px solid #ddd;
         }
         .project-card p {
             margin:             1rem;
@@ -171,7 +154,10 @@
         .file-link a {
             margin:             0;
             padding:            0;
-            font-size:          larger;
+        }
+        .file-label {
+            font-size:          small;
+            vertical-align:     text-top;
         }
     </style>
 </head>
@@ -210,17 +196,12 @@
             <a class="card" href="#biophilia">
                 <img src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
             </a>
-            <a class="card" href="#toolbox">
-                <img src="projects/toolbox-thumb.jpg" alt="Toolbox">
-            </a>
-            <a class="card" href="#cup-holder">
-                <img src="projects/cup holder-thumb.jpg" alt="Cup holder">
-            </a>
+            <img class="card" src="projects/toolbox-thumb.jpg" alt="Toolbox">
         </div>
         <em>Design</em>
         <div class="cards">
             <a class="card" href="#fz6-bracket">
-                <img src="projects/FZ6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+                <img src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
             </a>
         </div>
     </section>
@@ -248,6 +229,7 @@
             <li>Designed and authored a framework for reporting CPU utilization details targeting highly parallel applications</li>
         </ul>
     </section>
+    <hr>
     <div id="bench" class="project">
         <div class="project-card">
             <h3>Handcrafted Douglas-fir bench</h3>
@@ -255,6 +237,41 @@
             <p>Collected off-cuts from my place of work to build a park bench, as an exercise to learn joinery techniques.</p>
             <div class="file-link">
                 <a class="glyphicon glyphicon-jpg" href="projects/bench.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <div id="butcher-block" class="project">
+        <div class="project-card">
+            <h3>End-grain cutting board</h3>
+            <img src="projects/butcher block-thumb.jpg" alt="Butcher block">
+            <p>End-grain laminated Fir leftover from my bench project, beeswax finish.</p>
+            <div class="file-link">
+                <a class="glyphicon glyphicon-jpg" href="projects/butcher block.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <div id="biophilia" class="project">
+        <div class="project-card">
+            <h3>Eucalyptus engraving</h3>
+            <img src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
+            <p>As a thank-you to an employer, planed Eucalyptus wood and used a CNC laser cutter to engrave a modified logo.</p>
+            <div class="file-link">
+                <span class="file-label">Biophilia Collective: </span>
+                <a class="glyphicon glyphicon-globe" href="http://biophiliacollective.ca/"></a>
+                <a class="glyphicon glyphicon-jpg" href="projects/biophilia.jpg"></a>
+            </div>
+        </div>
+    </div>
+    <div id="fz6-bracket" class="project">
+        <div class="project-card">
+            <h3>Yamaha FZ6 license plate bracket</h3>
+            <img src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket rendering">
+            <p>3D-printable license plate bracket for my Yamaha FZ6.  Designed in Autodesk Inventor.</p>
+            <div class="file-link">
+                <span class="file-label">STL file: </span>
+                <a class="glyphicon glyphicon-file" href="projects/fz6 plate bracket.stl"></a><br>
+                <span class="file-label">Inventor IPT file: </span>
+                <a class="glyphicon glyphicon-file" href="projects/fz6 plate bracket.ipt"></a>
             </div>
         </div>
     </div>
