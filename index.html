@@ -76,9 +76,11 @@
         }
         .card {
             display:            block;
-            border-radius:      0.25rem;
             margin:             0 0 1px 0;
             padding:            0;
+        }
+        .card:first-child {
+            border-top-left-radius: 0.25rem;
         }
         a.card, a.card:hover {
             margin:             0 0 1px 0;
@@ -88,10 +90,21 @@
         a.card img, img.card {
             display:            block;
             width:              100%;
+        }
+        a.card img {
             border-radius:      inherit;
         }
         a.card:hover img {
             opacity:            0.75;
+        }
+        @media (max-width: 544px) {
+            .card:first-child {
+                border-top-right-radius: 0.25rem;
+            }
+            .card:last-child {
+                border-bottom-left-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+            }
         }
         @media (min-width: 544px) {
             .cards {
@@ -101,12 +114,6 @@
                 -webkit-column-gap: 1;
                 -moz-column-gap: 1px;
                 column-gap:     1px;
-            }
-            .card {
-                border-radius:  0;
-            }
-            .card:first-child {
-                border-top-left-radius: 0.25rem;
             }
         }
         @media (min-width: 768px) {
