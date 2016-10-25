@@ -35,6 +35,10 @@
     font-family:        'Glyphicons Social';
     content:            "\E022";
 }
+.glyphicon-instagram:before {
+    font-family:        'Glyphicons Social';
+    content:            "\E033";
+}
 .glyphicon-globe:before {
     font-family:        'Glyphicons Regular';
     content:            "\E341";
