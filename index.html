@@ -2,173 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Victor van Poppelen's résumé and portfolio">
+    <meta name="author" content="Victor van Poppelen">
     <title>Victor's Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts/fonts.css">
     <style type="text/css">
-        @import url('fonts/fonts.css');
-        * {
-            box-sizing:         border-box;
-        }
-        body {
-            margin:             1rem auto;
-            padding:            0 1rem;
-            font-family:        'PT Serif', serif;
-            font-size:          large;
-            color:              #444;
-        }
-        @media (min-width: 768px) {
-            body {
-                max-width:      730px;
-            }
-        }
-        header {
-            margin-bottom:      1rem;
-            font-size:          1.2rem;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            margin:             0 0 0.5rem 0;
-            font-weight:        500;
-            line-height:        1.1;
-        }
-        strong {
-            font-weight:        bolder;
-        }
-        a, a:link, a:visited {
-            margin:             -1px -2px 0 -2px;
-            padding:            1px 2px 0 2px;
-            color:              #3677a9;
-            font-weight:        bold;
-            text-decoration:    none;
-        }
-        a:hover {
-            color:              #fff;
-            background-color:   #3677a9;
-        }
-        section>p {
-            margin:             0 2rem 1rem 2rem;
-        }
-        a.glyphicon {
-            margin:             0 -0.1rem;
-            padding:            0.1rem;
-            font-weight:        normal;
-        }
-        div.profile {
-            float:              left;
-            margin:             -1rem 1rem 0 0;
-            overflow:           hidden;
-            height:             8rem;
-            width:              7rem;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding:            2px;
-        }
-        div.profile img {
-            width:              9.5rem;
-            transform:          translate(-15%, -8%);
-        }
-        .social {
-            margin-top:         -0.5rem;
-            text-align:         right;
-        }
-        .cards {
-            padding:            0.5rem 1rem 1rem 1rem;
-        }
-        .card {
-            display:            block;
-            margin:             0 0 1px 0;
-            padding:            0;
-        }
-        .card:first-child {
-            border-top-left-radius: 0.25rem;
-        }
-        a.card, a.card:hover {
-            margin:             0 0 1px 0;
-            padding:            0;
-            background-color:   #fff;
-        }
-        a.card img, img.card {
-            display:            block;
-            width:              100%;
-        }
-        a.card img {
-            border-radius:      inherit;
-        }
-        a.card:hover img {
-            opacity:            0.75;
-        }
-        @media (max-width: 544px) {
-            .card:first-child {
-                border-top-right-radius: 0.25rem;
-            }
-            .card:last-child {
-                border-bottom-left-radius: 0.25rem;
-                border-bottom-right-radius: 0.25rem;
-            }
-        }
-        @media (min-width: 544px) {
-            .cards {
-                -webkit-column-count: 2;
-                -moz-column-count: 2;
-                column-count:   2;
-                -webkit-column-gap: 1;
-                -moz-column-gap: 1px;
-                column-gap:     1px;
-            }
-        }
-        @media (min-width: 768px) {
-            .cards {
-                -webkit-column-count: 3;
-                -moz-column-count: 3;
-                column-count:   3;
-            }
-        }
-        .project {
-            display:            none;
-            padding:            1rem;
-        }
-        @media (min-width: 544px) {
-            .project {
-                padding:        1rem 15%;
-            }
-        }
-        .project:target {
-            display:            block;
-        }
-        .project-card {
-            border:             1px solid #ddd;
-            border-radius:      0.25rem;
-        }
-        .project-card h3 {
-            margin:             1rem;
-            text-align:         center;
-            color:              #818a91;
-        }
-        .project-card img {
-            width:              100%;
-            border-top:         1px solid #ddd;
-            border-bottom:      1px solid #ddd;
-        }
-        .project-card p {
-            margin:             1rem;
-            font-size:          medium;
-        }
-        .file-link {
-            margin:             -1rem 0 0 0;
-            padding:            0 0.5rem 0.5rem 0;
-            text-align:         right;
-        }
-        .file-link a {
-            margin:             0;
-            padding:            0;
-        }
-        .file-label {
-            font-size:          small;
-            vertical-align:     text-top;
-        }
     </style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!--
     <header>
         <div class="profile">
             <img alt="Profile picture" src="profile.jpg">
@@ -317,5 +164,6 @@
             </div>
         </div>
     </div>
+    -->
 </body>
 </html>
