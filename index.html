@@ -18,9 +18,11 @@
     }
     a {
       color: rgb(84,116,53);
+      font-weight: bold;
     }
     a:focus, a:hover {
       color: rgb(114,2,2);
+      text-decoration: none;
     }
     header {
       position: fixed;
@@ -56,6 +58,9 @@
     section h2:first-child {
       margin-top: 1rem;
     }
+    .card-img-top + .card-block {
+      border-top: 1px solid rgba(0,0,0,.125);
+    }
 
     @media (min-width: 576px) {
       header .container {
@@ -89,7 +94,7 @@
       <h2>Articles</h2>
       <hr>
       <ul>
-        <li><a href="http://avanpo.github.io/2016/10/11/avr-programming/">AVR Programming in C</a></li>
+        <li><a class="h5" href="http://avanpo.github.io/2016/10/11/avr-programming/">AVR Programming in C</a></li>
       </ul>
     </section>
     <section id="projects">
@@ -159,6 +164,12 @@
       <hr>
       <div class="card-columns">
         <div class="card">
+          <a data-toggle="modal" href="#makerspace">
+            <img class="card-img img-fluid" src="projects/makerspace.ca screenshot.png" alt="Makerspace.ca screenshot">
+          </a>
+        </div>
+        <p></p> <!--TEMP: to force item into second column-->
+        <div class="card">
           <a data-toggle="modal" href="#throttle-sync">
             <img class="card-img img-fluid" src="projects/throttle sync.jpg" alt="Throttle-body synchronizer">
           </a>
@@ -226,37 +237,71 @@
   </div>
 
     -->
+<!-- Toolbox I -->
   <div class="modal fade" id="toolbox-I">
     <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Toolbox</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+      <div class="card">
+        <div class="card-block">
+          <h5 class="card-title">
+            Toolbox
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
         </div>
-        <div class="modal-body">
-          <img class="img-fluid rounded mb-3" src="projects/toolbox I.jpg" alt="Toolbox">
-          <img class="img-fluid rounded" src="projects/toolbox I - full.jpg" alt="Full toolbox">
+        <img class="img-fluid mb-3" src="projects/toolbox I.jpg" alt="Toolbox">
+        <img class="card-img-bottom img-fluid" src="projects/toolbox I - full.jpg" alt="Full toolbox">
+      </div>
+    </div>
+  </div>
+<!-- Makerspace website -->
+  <div class="modal fade" id="makerspace">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="projects/makerspace.ca screenshot.png" alt="Makerspace.ca screenshot">
+        <div class="card-block">
+          <h5 class="card-title">
+            Victoria Makerspace website
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <p>As a co-op position in the spring semester of 2017, I programmed a member-management and payment system for Victoria Makerspace (where I've been a member since 2015), and designed their website.  I used <a href="https://golang.org">Go</a> as the server language, making extensive use of its standard library, along with PostgreSQL for the database and the <a href="https://stripe.com">Stripe</a> API for online payments.  One of the more difficult challenges was integrating cleanly with the existing <a href="https://makerspace.ca/talk">Discourse</a> forum, which required writing a single-sign-on endpoint and implementing its REST API in Go.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://makerspace.ca" target="_blank">
+            <span class="glyphicons glyphicons-globe"></span>
+            https://makerspace.ca
+          </a>
         </div>
       </div>
     </div>
   </div>
+<!-- Throttle synchronizer -->
   <div class="modal fade" id="throttle-sync">
     <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Throttle body synchronizer</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img class="img-fluid rounded mb-3" src="projects/throttle sync.jpg" alt="Throttle-body synchronizer circuit">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="projects/throttle sync.jpg" alt="Throttle-body synchronizer circuit">
+        <div class="card-block">
+          <h5 class="card-title">
+            Throttle body synchronizer
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
           <p>As my motorcycle has 4 throttle bodies—each with manual idle adjustments—synchronizing the idle control valves for smooth closed- and part-throttle operation can be difficult without expensive tools.  Using an ATmega328 MCU, Freescale MPX-series pressure sensor, and an LCD, I built a simple sensor circuit that outputs gauge pressure values to the LCD, so that I can accurately synchronize the throttle bodies.</p>
-          <img class="img-fluid rounded mb-3" src="projects/lcd.c preview.png" alt="LCD code screenshot">
-          <a class="glyphicons-social glyphicons-social-github" href="https://github.com/vvanpo/uvcs/blob/master/avr/lcd.c"></a> AVR code
-          <a class="glyphicons-filetypes glyphicons-filetypes-pdf" href="http://www.nxp.com/files/sensors/doc/data_sheet/MPX2100.pdf"></a> MPX2100 datasheet
+        </div>
+        <img class="img-fluid" src="projects/lcd.c preview.png" alt="LCD code screenshot">
+        <div class="card-footer">
+          <a href="https://github.com/vvanpo/uvcs/blob/master/avr/lcd.c" target="_blank">
+            <span class="glyphicons-social glyphicons-social-github"></span>
+            AVR code
+          </a>
+          ·
+          <a href="http://www.nxp.com/files/sensors/doc/data_sheet/MPX2100.pdf" target="_blank">
+            <span class="glyphicons-filetypes glyphicons-filetypes-pdf"></span>
+            MPX2100 datasheet
+          </a>
         </div>
       </div>
     </div>
@@ -277,7 +322,6 @@
     });
     resize_header();
     $("body").scrollspy({target: "#nav"});
-    $(".modal:target").modal("show");
   </script>
 </body>
 </html>
