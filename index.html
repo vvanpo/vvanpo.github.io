@@ -3,101 +3,159 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Victor van Poppelen's résumé and portfolio">
+  <meta name="description" content="Victor van Poppelen's portfolio">
   <meta name="author" content="Victor van Poppelen">
   <title>Victor's Portfolio</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+  <!-- Colour palette: 137,154,103; 84,116,53; 70,101,34; 42,47,24; 114,2,2 -->
   <style type="text/css">
     body {
-      background: rgba(255, 255, 255, 0.5), url("wall background.jpg") no-repeat cover fixed;
+      position: relative;
       font-family: "PT Serif", serif;
+      color: rgb(42,47,24);
     }
-    #portrait {
-      width: 300px;
+    a {
+      color: rgb(84,116,53);
+    }
+    a:focus, a:hover {
+      color: rgb(114,2,2);
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      transition: height 0.25s;
+      background: rgba(247,247,247,0.95);
+      height: 10rem;
+    }
+    #profile {
+      border-radius: 0 0 0.5rem 0.5rem;
+      margin-right: 1rem;
+      transition: height 0.25s;
+      height: 11rem;
+    }
+    .nav-tabs .nav-link {
+      transition: background-color 0.25s;
+    }
+    header + .container {
+      margin-top: 12rem;
+    }
+    header.shrink {
+      height: 6rem;
+    }
+    header.shrink #profile {
+      height: 7rem;
+    }
+    section {
+      margin-top: -7rem;
+      padding-top: 7rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img id="portrait" alt="Portrait" src="profile.jpg">
-    <h1>Victor van Poppelen</h1>
-    <a class="glyphicon glyphicon-gmail" href="mailto:victorvanpoppelen@uvic.ca"></a>
-    <a class="glyphicon glyphicon-linked-in" href="https://www.linkedin.com/in/victorvanpoppelen"></a>
-    <a class="glyphicon glyphicon-github" href="https://github.com/vvanpo"></a>
+    <div class="container media">
+      <img id="profile" class="d-flex" alt="Profile picture" src="profile.jpg">
+      <div class="media-body align-self-end mb-3">
+        <h1>Victor van Poppelen</h1>
+        <ul id="nav" class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#design">Design</a></li>
+          <li class="nav-item"><a class="nav-link" href="#electronics">Electronics</a></li>
+        </ul>
+        <!--
+        <a class="glyphicons-social glyphicons-social-gmail" href="mailto:victorvanpoppelen@uvic.ca"></a>
+        <a class="glyphicons-social glyphicons-social-linked-in" href="https://www.linkedin.com/in/victorvanpoppelen"></a>
+        <a class="glyphicons-social glyphicons-social-github" href="https://github.com/vvanpo"></a>
+        -->
+      </div>
+    </div>
   </header>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <!--
-    <section>
-        <h2>Articles</h2>
-        <ul>
-            <li><a href="http://avanpo.github.io/2016/10/11/avr-programming/">
-            AVR Programming in C
-            </a></li>
-        </ul>
+  <div class="container">
+    <section id="articles">
+      <h3>Articles</h3>
+      <ul>
+        <li><a href="http://avanpo.github.io/2016/10/11/avr-programming/">AVR Programming in C</a></li>
+      </ul>
     </section>
-    <section>
-        <h2>Projects</h2>
-        <h4><em>Wood- and Leathercraft</em></h4>
-        <div class="cards">
-            <a class="card" href="#pencil-case">
-                <img class="card" src="projects/pencil case-thumb.jpg" alt="Leather pencil case">
-            </a>
-            <a class="card" href="#bench">
-                <img src="projects/bench-thumb.jpg" alt="Handcrafted Fir bench">
-            </a>
-            <a class="card" href="#butcher-block">
-                <img src="projects/butcher block-thumb.jpg" alt="Butcher block">
-            </a>
-            <a class="card" href="#biophilia">
-                <img src="projects/biophilia-thumb.jpg" alt="Engraved eucalyptus">
-            </a>
-            <img class="card" src="projects/hatchet sheath-thumb.jpg" alt="Leather hatchet sheath">
-            <img class="card" src="projects/toolbox-thumb.jpg" alt="Toolbox">
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="card-columns">
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/carving knife.jpg" alt="Carving knife">
         </div>
-        <h4><em>Design</em></h4>
-        <div class="cards">
-            <a class="card" href="#fz6-bracket">
-                <img src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
-            </a>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/epicurus etching.jpg" alt="Aluminum Epicurus etching">
         </div>
-        <h4><em>Electronics & Software</em></h4>
-        <div class="cards">
-            <a class="card" href="#fz6-throttle-vacuum">
-                <img src="projects/lcd.c preview.png" alt="LCD code screenshot">
-            </a>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/etched keychain.jpg" alt="Etched steel keychain">
         </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/toolbox III.jpg" alt="Sheet-metal toolbox">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/lathe base.jpg" alt="Lathe base">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/toolbox II.jpg" alt="Toolbox">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/truck toolbox.jpg" alt="Truck toolbox">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/rail-spike joinery.jpg" alt="Rail-spike joinery">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/pencil case.jpg" alt="Leather pencil case">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/bench.jpg" alt="Handcrafted Fir bench">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/butcher block.jpg" alt="Butcher block">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/biophilia.jpg" alt="Engraved Eucalyptus sign">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/address sign.jpg" alt="Address sign">
+        </div>
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/hatchet sheath.jpg" alt="Leather hatchet sheath">
+        </div>
+        <div class="card">
+          <a data-toggle="modal" href="#toolbox-I">
+            <img class="card-img img-fluid" src="projects/toolbox I.jpg" alt="Toolbox">
+          </a>
+        </div>
+      </div>
     </section>
-    <section>
-        <h2>Education</h2>
-        <strong>University of Victoria,</strong> Victoria, BC
-        <em style="float: right">2016 –</em><br>
-        <p>B.Eng., Mechanical Engineering</p>
-        <strong>McGill University,</strong> Montréal, QC
-        <em style="float: right">2010 – 2014</em><br>
-        <p>
-            B.Sc., Honours Math and Physics (<strong>discontinued</strong>)<br>
-            CGPA 3.8/4.0<br>
-            Dean's Honour List<br>
-            Faculty Academic Scholarship
-        </p>
+    <section id="design">
+      <h3>Design</h3>
+      <div class="card-columns">
+        <div class="card">
+          <img class="card-img img-fluid" src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+        </div>
+      </div>
     </section>
-    <section>
-        <h2>Employment</h2>
-        <strong>Systems Performance Engineer,</strong> IBM Canada
-        <em style="float: right">2013 – 2015</em><br>
-        <em>Markham, ON, Canada</em>
-        <ul>
-            <li>Lead and contributed to projects optimizing l/O performance on Linux systems, specifically for IBM’s Power microarchitecture</li>
-            <li>Designed and authored a framework for reporting CPU utilization details targeting highly parallel applications</li>
-            <li>Authored a tool utilizing perf_events to report a consistent and high-resolution breakdown of cycles spent in each of the classes of CPU execution units</li>
-            <li>Investigated kernel optimizations to improve I/O throughput on high-performance, virtualized systems (KVM and PowerVM)</li>
-        </ul>
+    <section id="electronics">
+      <h3>Electronics & Software</h3>
+      <div class="card-columns">
+        <div class="card">
+          <a data-toggle="modal" href="#throttle-sync">
+            <img class="card-img img-fluid" src="projects/throttle sync.jpg" alt="Throttle-body synchronizer">
+          </a>
+        </div>
+      </div>
     </section>
-    <hr>
+    <!--
+
+
     <div id="pencil-case" class="project">
         <div class="project-card">
             <h3>Leather pencil case</h3>
@@ -153,19 +211,61 @@
             </div>
         </div>
     </div>
-    <div id="fz6-throttle-vacuum" class="project">
-        <div class="project-card">
-            <h3>Yamaha FZ6 throttle body synchronizer</h3>
-            <img src="projects/lcd.c preview.png" alt="LCD code screenshot">
-            <p>As my motorcycle has 4 throttle bodies—each with manual idle adjustments—synchronizing the idle control valves for smooth closed- and part-throttle operation can be difficult without expensive tools.  Using an ATmega328 MCU, Freescale MPX-series pressure sensor, and an LCD I built a simple sensor circuit that outputs gauge pressure values to the LCD, so that I can accurately synchronize the throttle bodies.</p>
-            <div class="file-link">
-                <span class="file-label">AVR code: </span>
-                <a class="glyphicon glyphicon-github" href="https://github.com/vvanpo/uvcs/blob/master/avr/lcd.c"></a><br>
-                <span class="file-label">MPX2100 datasheet: </span>
-                <a class="glyphicon glyphicon-pdf" href="http://www.nxp.com/files/sensors/doc/data_sheet/MPX2100.pdf"></a>
-            </div>
-        </div>
-    </div>
+  </div>
+
     -->
+  <div class="modal fade" id="toolbox-I">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Toolbox</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid rounded mb-3" src="projects/toolbox I.jpg" alt="Toolbox">
+          <img class="img-fluid rounded" src="projects/toolbox I - full.jpg" alt="Full toolbox">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="throttle-sync">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Throttle body synchronizer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid rounded mb-3" src="projects/throttle sync.jpg" alt="Throttle-body synchronizer circuit">
+          <p>As my motorcycle has 4 throttle bodies—each with manual idle adjustments—synchronizing the idle control valves for smooth closed- and part-throttle operation can be difficult without expensive tools.  Using an ATmega328 MCU, Freescale MPX-series pressure sensor, and an LCD, I built a simple sensor circuit that outputs gauge pressure values to the LCD, so that I can accurately synchronize the throttle bodies.</p>
+          <img class="img-fluid rounded mb-3" src="projects/lcd.c preview.png" alt="LCD code screenshot">
+          <a class="glyphicons-social glyphicons-social-github" href="https://github.com/vvanpo/uvcs/blob/master/avr/lcd.c"></a> AVR code
+          <a class="glyphicons-filetypes glyphicons-filetypes-pdf" href="http://www.nxp.com/files/sensors/doc/data_sheet/MPX2100.pdf"></a> MPX2100 datasheet
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+    function resize_header() {
+      if ($(window).scrollTop() > 50) {
+        $("header").addClass("shrink");
+      } else {
+        $("header").removeClass("shrink");
+      }
+    }
+    $(window).scroll(function() {
+      resize_header();
+    });
+    resize_header();
+    $("body").scrollspy({target: "#nav"});
+    $(".modal:target").modal("show");
+  </script>
 </body>
 </html>
