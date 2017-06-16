@@ -114,12 +114,14 @@
           <li class="nav-item"><a class="nav-link" href="#design">Design</a></li>
           <li class="nav-item"><a class="nav-link" href="#electronics">Electronics</a></li>
         </ul>
-        <!--
-        <a class="glyphicons-social glyphicons-social-gmail" href="mailto:victorvanpoppelen@uvic.ca"></a>
-        <a class="glyphicons-social glyphicons-social-linked-in" href="https://www.linkedin.com/in/victorvanpoppelen"></a>
-        <a class="glyphicons-social glyphicons-social-github" href="https://github.com/vvanpo"></a>
-        -->
       </div>
+      <ul class="nav flex-column">
+        <li class="nav-item" style="line-height: 1.25;">
+          <a class="d-block glyphicons-social glyphicons-social-gmail" href="mailto:victorvanpoppelen@uvic.ca"></a>
+          <a class="d-block glyphicons-social glyphicons-social-linked-in" href="https://www.linkedin.com/in/victorvanpoppelen"></a>
+          <a class="d-block glyphicons-social glyphicons-social-github" href="https://github.com/vvanpo"></a>
+        </li>
+      </ul>
     </div>
   </header>
   <div class="container">
@@ -174,7 +176,9 @@
           <img class="card-img img-fluid" src="projects/address sign.jpg" alt="Address sign">
         </div>
         <div class="card">
-          <img class="card-img img-fluid" src="projects/hatchet sheath.jpg" alt="Leather hatchet sheath">
+          <a data-toggle="modal" href="#hatchet-sheath">
+            <img class="card-img img-fluid" src="projects/hatchet sheath.jpg" alt="Leather hatchet sheath">
+          </a>
         </div>
         <div class="card">
           <a data-toggle="modal" href="#toolbox-I">
@@ -188,7 +192,9 @@
       <hr>
       <div class="card-columns">
         <div class="card">
-          <img class="card-img img-fluid" src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+          <a data-toggle="modal" href="#fz6-bracket">
+            <img class="card-img img-fluid" src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket">
+          </a>
         </div>
       </div>
     </section>
@@ -254,22 +260,26 @@
             </div>
         </div>
     </div>
-    <div id="fz6-bracket" class="project">
-        <div class="project-card">
-            <h3>Yamaha FZ6 license plate bracket</h3>
-            <img src="projects/fz6 plate bracket.png" alt="Yamaha FZ6 license plate bracket rendering">
-            <p>3D-printable license plate bracket for my Yamaha FZ6.  Designed in Autodesk Inventor.</p>
-            <div class="file-link">
-                <span class="file-label">STL file: </span>
-                <a class="glyphicon glyphicon-file" href="projects/fz6 plate bracket.stl"></a><br>
-                <span class="file-label">Inventor IPT file: </span>
-                <a class="glyphicon glyphicon-file" href="projects/fz6 plate bracket.ipt"></a>
-            </div>
-        </div>
-    </div>
-  </div>
 
     -->
+
+<!-- Hatchet sheath -->
+  <div class="modal fade" id="hatchet-sheath">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="projects/hatchet sheath.jpg" alt="Hatchet sheath">
+        <div class="card-block">
+          <h5 class="card-title">
+            Leather hatchet sheath
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <p>My first foray into leatherwork, hand-stitched a sheath for my hatchet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Toolbox I -->
   <div class="modal fade" id="toolbox-I">
     <div class="modal-dialog modal-lg" role="document">
@@ -287,6 +297,31 @@
       </div>
     </div>
   </div>
+
+<!-- FZ6 plate bracket -->
+  <div class="modal fade" id="fz6-bracket">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="projects/fz6 plate bracket.png" alt="FZ6 license plate bracket">
+        <div class="card-block">
+          <h5 class="card-title">
+            FZ6 license plate bracket
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <p>3D-printable license plate bracket for my Yamaha FZ6.  Designed in Autodesk Inventor.</p>
+        </div>
+        <div class="card-footer">
+          <a href="projects/fz6 plate bracket.stl" target="_blank">
+            <span class="glyphicons glyphicons-file"></span>
+            STL file
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- Makerspace website -->
   <div class="modal fade" id="makerspace">
     <div class="modal-dialog modal-lg" role="document">
@@ -294,6 +329,7 @@
         <img class="card-img-top img-fluid" src="projects/makerspace.ca screenshot.png" alt="Makerspace.ca screenshot">
         <div class="card-block">
           <h5 class="card-title">
+            <img style="height: 1.5rem;" src="makerspace-logo.svg" alt="Victoria Makerspace logo">
             Victoria Makerspace website
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -339,6 +375,7 @@
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
